@@ -87,3 +87,30 @@ function sumEvenNumbers(arr) {
 // Call the function and print the result
 const sumEvens = sumEvenNumbers(numbers);
 console.log(sumEvens);
+
+/** 09.Task: Advanced Sorting
+ * Create an array of objects representing students with 'name' and 'grades' properties. Write a function to sort the students by average grade in descending order.
+ **/
+
+// Array of student objects
+const students = [
+  { name: "Alice", grades: [85, 90, 78] },
+  { name: "Bob", grades: [92, 88, 95] },
+  { name: "Charlie", grades: [70, 75, 80] },
+  { name: "David", grades: [88, 85, 91] },
+];
+
+// Function to calculate average grade for a student
+function average(grades) {
+  const sum = grades.reduce((acc, grade) => acc + grade, 0);
+  return sum / grades.length;
+}
+
+// Function to sort students by average grade (descending)
+function sortByAverageGrade(studentsArray) {
+  return studentsArray.sort((a, b) => average(b.grades) - average(a.grades));
+}
+
+// Sort and print the result
+const sortedStudents = sortByAverageGrade(students);
+console.log(sortedStudents);
