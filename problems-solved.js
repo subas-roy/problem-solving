@@ -22,3 +22,25 @@ function getMaleNames(peopleArray) {
 // Step 3: Print the result
 const maleNames = getMaleNames(people);
 console.log(maleNames);
+
+/**
+ * 2.Task: Object Manipulation
+ * Create an array of objects representing books with properties like title, author, and year. Write a function that takes the array and returns a new array with only the book titles. Print the result.
+ **/
+
+// Array of book objects
+const books = [
+  { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+  { title: "1984", author: "George Orwell", year: 1949 },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+  { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951 },
+];
+
+// Function to get only titles from the array of books
+function getBookTitles(bookArray) {
+  return bookArray.map((book) => book.title);
+}
+
+// Call the function and print the result
+const titles = getBookTitles(books);
+console.log(titles);
